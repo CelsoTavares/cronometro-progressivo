@@ -24,8 +24,14 @@ clearInterval(tempo);
 })
 // incia
 play.addEventListener("click",function play1(){
-
-    tempo = setInterval (() => { timer(); }, 1000);
+    play.classList.toggle("active");
+    
+    if (play.classList.contains("active")) {
+        tempo = setInterval (() => { timer(); }, 1000);
+    }else {
+        clearInterval(tempo);
+       
+    }
 }) 
 function timer(){
     segundos++;
