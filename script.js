@@ -1,6 +1,6 @@
-var pause =document.getElementById("pause")
-var play =document.getElementById("play")
-var stop =document.getElementById("stop")
+var pause = document.getElementById("pause")
+var play = document.getElementById("play")
+var stop = document.getElementById("stop")
 
 var hora = 0;
 var minutos = 0;
@@ -9,6 +9,7 @@ var tempo;
 
 // pausa
 pause.addEventListener("click", function pause1(){
+play.classList.remove("active");
 clearInterval(tempo);
 hora = hora;
 minutos = minutos;
@@ -16,6 +17,7 @@ segundos = segundos;
 })
 // pausa e zera cronometro
 stop.addEventListener("click", function stop1(){
+play.classList.remove("active");
 clearInterval(tempo);
  hora = 0;
  minutos = 0;
