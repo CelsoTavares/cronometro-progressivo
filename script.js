@@ -1,20 +1,22 @@
 var pause = document.getElementById("pause")
 var play = document.getElementById("play")
 var stop = document.getElementById("stop")
+var input = document.getElementsByTagName('input')[0]; 
+var container = document.getElementById("container")
+input.addEventListener("click", function() {
+  console.log(input.checked)
 
+ if(input.checked){
+    container.style.background = '#444242'
+ }else{
+    container.style.background = ''
+ }
+})
 var hora = 0;
 var minutos = 0;
 var segundos = 0;
 var tempo;
 
-// pausa
-pause.addEventListener("click", function pause1(){
-play.classList.remove("active");
-clearInterval(tempo);
-hora = hora;
-minutos = minutos;
-segundos = segundos;
-})
 // pausa e zera cronometro
 stop.addEventListener("click", function stop1(){
 play.classList.remove("active");
