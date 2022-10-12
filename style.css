@@ -3,16 +3,89 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 #container{
     display: flex;
     align-items: center;
     justify-content: center;
     background: lightskyblue;
     height: 100vh;
+    transition: all 2s;
     
 }
 #container button{
     margin: 5px 5px;
     padding: 10px;
     border-radius: 10px;
+}
+#play{
+    background-image: url('./img/playPause.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgb(245, 241, 241);
+}
+#stop{
+    background: rgba(0, 0, 0, 0.89);
+    width: 50px;
+    height: 50px;
+    border: 12px solid rgb(245, 241, 241);
+}
+#caixa{
+    color: white;
+    padding: 5px 5px;
+    margin: 10px;
+    border-radius: 15px;
+    background: #2196F3;
+}
+button{
+    border: none;
+    cursor: pointer;
+}
+#switch{
+    position: relative;
+    display: inline-block;
+    width: 64px;
+    height: 34px;
+}
+#switch input{
+   opacity: 0;
+   width: 0;
+   height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgb(245, 241, 241);
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider::before {
+    position: absolute;
+    cursor: pointer;
+    content: '';
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    border-radius: 50%;
+    background-color: rgba(204, 32, 32, 0.89);
+    -webkit-transition: .4s;
+    transition: 1s;
+}
+input:checked + .slider::before {
+    background-color: rgba(44, 233, 139, 0.89);
+}
+input:checked + .slider {
+    box-shadow: 1px 1px 10px whitesmoke;
+}
+input:checked + .slider::before {
+    -webkit-transform: translateX(26px); /*Safari e chrome */
+    -ms-transform: translateX(26px); /* internet explorer */
+    transform: translateX(26px);
 }
