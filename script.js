@@ -1,11 +1,10 @@
-var pause = document.getElementById("pause")
 var play = document.getElementById("play")
 var stop = document.getElementById("stop")
 var input = document.getElementsByTagName('input')[0]; 
 var container = document.getElementById("container")
-input.addEventListener("click", function() {
-  console.log(input.checked)
 
+input.addEventListener("click", function() {
+  
  if(input.checked){
     container.style.background = '#444242'
  }else{
@@ -17,7 +16,7 @@ var minutos = 0;
 var segundos = 0;
 var tempo;
 
-// pausa e zera cronometro
+// zera cronometro
 stop.addEventListener("click", function stop1(){
 play.classList.remove("active");
 clearInterval(tempo);
@@ -26,7 +25,7 @@ clearInterval(tempo);
  segundos = 0;
  document.getElementById("caixa").innerHTML = '00:00:00';
 })
-// incia
+// incia e pausa
 play.addEventListener("click",function play1(){
     play.classList.toggle("active");
 
