@@ -3,7 +3,7 @@ var stop = document.getElementById("stop")
 var input = document.getElementsByTagName('input')[0]; 
 var container = document.getElementById("container")
 
-input.addEventListener("click", function() {
+input.addEventListener("click",()=> {
   
  if(input.checked){
     container.style.background = '#444242'
@@ -17,7 +17,7 @@ var segundos = 0;
 var tempo;
 
 // zera cronometro
-stop.addEventListener("click", function stop1(){
+stop.addEventListener("click",()=>{
 play.classList.remove("active");
 clearInterval(tempo);
  hora = 0;
@@ -26,7 +26,7 @@ clearInterval(tempo);
  document.getElementById("caixa").innerHTML = '00:00:00';
 })
 // incia e pausa
-play.addEventListener("click",function play1(){
+play.addEventListener("click",()=>{
     play.classList.toggle("active");
 
     if (play.classList.contains("active")) {
