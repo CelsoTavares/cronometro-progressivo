@@ -3,7 +3,7 @@ var stop = document.getElementById("stop")
 var input = document.getElementsByTagName('input')[0]; 
 var container = document.getElementById("container")
 
-input.addEventListener("click",()=> {
+input.addEventListener("click",()=>{
   
  if(input.checked){
     container.style.background = '#444242'
@@ -47,7 +47,9 @@ function timer(){
         }
     }
 
-    var format = (hora < 10 ? '0' + hora : hora) + ':' + (minutos < 10 ? '0' + minutos : minutos) + ':' + (segundos < 10 ? '0' + segundos : segundos);
+    var format = (hora < 10 ? '0' + hora : hora) + ':' 
+                 + (minutos < 10 ? '0' + minutos : minutos) + ':' 
+                 + (segundos < 10 ? '0' + segundos : segundos);
 document.getElementById("caixa").innerHTML = format;
 
 }
