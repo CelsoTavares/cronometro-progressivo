@@ -14,7 +14,7 @@ Cronômetro, desenvolvido com objetivo de praticar a linguagem de programação 
 
 ## Links
 
-#### [Projeto](https://celsotavares.github.io/Cronometro-progressivo/)
+#### [Projeto](https://celsotavares.github.io/cronometro-progressivo/)
 
 ## Autor
 
